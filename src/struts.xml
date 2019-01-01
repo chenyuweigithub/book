@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.i18n.encoding" value="utf-8" />
+    <package name="default" namespace="/" extends="struts-default">
+		<action name="login" class="login">
+			<result name="success">index.jsp</result>
+			<result name="error">error.jsp</result>			
+		</action>
+		<action name="logout" class="login" method="logout">
+			<result name="success">index.jsp</result>
+			<result name="error">error.jsp</result>			
+		</action>
+		<action name="register" class="login" method="register">
+			<result name="success">index.jsp</result>
+			<result name="error">error.jsp</result>			
+		</action>
+		<action name="updatepwd" class="login" method="updatepwd">
+			<result name="success">index.jsp</result>
+			<result name="error">updatepwd.jsp</result>			
+		</action>
+		<action name="updateMessage" class="login" method="updateMessage">
+			<result name="success">index.jsp</result>
+			<result name="error">error.jsp</result>			
+		</action>
+		<action name="browseCatalog" class="bookAction" method="browseCatalog">
+			<result name="success">menu.jsp</result>
+		</action>
+        <action name="index" class="index">
+			<result>index.jsp</result>
+		</action>
+		<action name="loginjsp" class="index">
+			<result>login.jsp</result>
+		</action>
+		<action name="registerjsp" class="index">
+			<result>register.jsp</result>
+		</action>
+		<action name="updatepwdjsp" class="index">
+			<result>updatepwd.jsp</result>
+		</action>
+		<action name="updateMessagejsp" class="index">
+			<result>updateMessage.jsp</result>
+		</action>
+		<action name="browseBook" class="bookAction" method="browseBook">
+			<result name="success">browseBook.jsp</result>
+		</action>
+		<action name="browseBookPaging" class="bookAction" method="browseBookPaging">
+			<result name="success">browseBookPaging.jsp</result>
+		</action>
+		<action name="searchBook" class="bookAction" method="searchBookPaging">
+			<result name="success">searchBook_result.jsp</result>
+		</action>
+		<action name="addToCart" class="shoppingAction" method="addToCart">
+			<result name="success">addToCart_success.jsp</result>
+		</action>
+		<action name="updateCart" class="shoppingAction" method="updateCart">
+			<result name="success">showCart.jsp</result>
+		</action>	
+	</package>
+</struts>    
